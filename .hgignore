@@ -1,0 +1,10 @@
+/bitrix/cache
+/bitrix/components
+/bitrix/managed_cache
+/bitrix/stack_cache
+/bitrix/html_pages
+/bitrix/html_pages
+/bitrix/updates
+/bitrix/php_interface/dbconn.php
+upload
+.idea/
