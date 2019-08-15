@@ -12,6 +12,13 @@ IncludeTemplateLangFile(__FILE__);
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/slides.min.jquery.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.carouFredSel-6.1.0-packed.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/functions.js"></script>
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/reset.css" />
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/style.css" />
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/owl.carousel.css" />
+<script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.min.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/owl.carousel.min.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/scripts.js"></script>
+
 
 
 	<title><?$APPLICATION->ShowTitle()?></title>
@@ -30,15 +37,15 @@ IncludeTemplateLangFile(__FILE__);
 
 							<span class="tel">
 								<?$APPLICATION->IncludeComponent(
-										"bitrix:main.include",
-										"",
-										Array(
-											"AREA_FILE_SHOW" => "page",
-											"AREA_FILE_SUFFIX" => "inc",
-											"EDIT_TEMPLATE" => "",
-											"PATH" => ""
-										)
-									);?>
+				"bitrix:main.include",
+				"",
+				Array(
+					"AREA_FILE_SHOW" => "file",
+					"AREA_FILE_SUFFIX" => "inc",
+					"EDIT_TEMPLATE" => "",
+					"PATH" => "/work.php"
+				)
+			);?>
 							</span>	<br/>
 							время работы <span class="workhours">ежедневно с 9-00 до 18-00</span>
 						</td>
