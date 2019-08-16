@@ -41,6 +41,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Поиск", 
+		"/search/index.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

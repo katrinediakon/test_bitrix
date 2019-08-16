@@ -1,5 +1,5 @@
 <?
-$arDirProperties = array(
-   "Текст" => "меню"
+$arDirProperties = Array(
+   "CLASS" => "red"
 );
 ?>

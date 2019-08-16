@@ -1866,4 +1866,14 @@ color: #0073A3;
 {
 	color: #ff0000;
 }
+.color-green
+{
+	color: green;
+}
+.side-block .red {
+	background: linear-gradient(#fda3a3, #ff0000);
+}
+.side-block .green {
+	background: linear-gradient(#e2ffe7, #00ff43);
+}
 /*================================================== pagination =========================================*/

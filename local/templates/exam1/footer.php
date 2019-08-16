@@ -3,7 +3,7 @@ IncludeTemplateLangFile(__FILE__);
 ?>
 </div>
 </div>
-<div class="sb_sidebar">
+<div class="side">
   <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"vertical_menu",

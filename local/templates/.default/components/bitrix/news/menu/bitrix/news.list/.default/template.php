@@ -19,7 +19,9 @@ $this->setFrameMode(true);
 <div class="title">
  <div class="photo-block">
 	 <?if(is_array($arItem["PREVIEW_PICTURE"])):?>
-	 <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="">
+	   <? $renderImage = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], Array("width" => 59, "height" => 59), BX_RESIZE_IMAGE_PROPORTIONAL, false); ?>
+		 <? echo (CFile::ShowImage($renderImage['src'], $newWidth, $newHeight, "border=0", "", true))?>
+
 
 	 <?endif?>
 	 <?if(!is_array($arItem["PREVIEW_PICTURE"])):?>

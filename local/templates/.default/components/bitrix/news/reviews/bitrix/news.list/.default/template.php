@@ -30,7 +30,8 @@ $this->setFrameMode(true);
 <div class="review-text-cont">	<?echo $arItem["PREVIEW_TEXT"];?></div>
 </div>
 <?if(is_array($arItem["PREVIEW_PICTURE"])):?>
-<div class="review-img-wrap"><a href="#"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="img"></a></div>
+ <? $renderImage = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], Array("width" => 65, "height" => 50), BX_RESIZE_IMAGE_EXACT, false); ?>
+<div class="review-img-wrap"><a href="#"> <? echo (CFile::ShowImage($renderImage['src'], $newWidth, $newHeight, "border=0", "", true))?></a></div>
 <?endif?>
 <?if(!is_array($arItem["PREVIEW_PICTURE"])):?>
 <div style="clear: both;" class="review-img-wrap"><img src="/local/templates/.default/no_photo.jpg" alt="img"></div>
