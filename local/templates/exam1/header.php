@@ -12,13 +12,12 @@ IncludeTemplateLangFile(__FILE__);
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/slides.min.jquery.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.carouFredSel-6.1.0-packed.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/functions.js"></script>
-<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/reset.css" />
-<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/style.css" />
-<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/css/owl.carousel.css" />
-<script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.min.js"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/owl.carousel.min.js"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/scripts.js"></script>
-
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>//css/reset.css" />
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>//css/style.css" />
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>//css/owl.carousel.css" />
+<script src="<?=SITE_TEMPLATE_PATH?>//js/jquery.min.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>//js/owl.carousel.min.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>//js/scripts.js"></script>
 
 
 	<title><?$APPLICATION->ShowTitle()?></title>
@@ -34,19 +33,16 @@ IncludeTemplateLangFile(__FILE__);
 							<h1><a href="">Мебельный магазин</a></h1>
 						</td>
 						<td rowspan="2" class="hd_txarea">
-
-							<span class="tel">
-								<?$APPLICATION->IncludeComponent(
-				"bitrix:main.include",
-				"",
-				Array(
-					"AREA_FILE_SHOW" => "file",
-					"AREA_FILE_SUFFIX" => "inc",
-					"EDIT_TEMPLATE" => "",
-					"PATH" => "/work.php"
-				)
-			);?>
-							</span>	<br/>
+							<span class="tel">			<?$APPLICATION->IncludeComponent(
+						"bitrix:main.include",
+						"",
+						Array(
+							"AREA_FILE_SHOW" => "file",
+							"AREA_FILE_SUFFIX" => "inc",
+							"EDIT_TEMPLATE" => "",
+							"PATH" => "/work.php"
+						)
+					);?></span>	<br/>
 							время работы <span class="workhours">ежедневно с 9-00 до 18-00</span>
 						</td>
 						<td style="width:232px">
@@ -60,8 +56,15 @@ IncludeTemplateLangFile(__FILE__);
 					</tr>
 					<tr>
 						<td style="padding-top: 11px;">
-							<a href="" class="hd_singin">Войти на сайт</a><br>
-							<a href="" class="hd_signup">Зарегистрироватся</a>
+
+							<?$APPLICATION->IncludeComponent("bitrix:system.auth.form", "auth", Array(
+		"FORGOT_PASSWORD_URL" => "zabyli-parol.php",	// Страница забытого пароля
+			"PROFILE_URL" => "profil.php",	// Страница профиля
+			"REGISTER_URL" => "/registratsiya.php",	// Страница регистрации
+			"SHOW_ERRORS" => "N",	// Показывать ошибки
+		),
+		false
+	);?>
 						</td>
 					</tr>
 				</table>

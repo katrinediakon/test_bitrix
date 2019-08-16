@@ -2,53 +2,24 @@
 
 
 <?if (!empty($arResult)):?>
-<div class="sb_nav">
-<ul >
 
+		<!-- side menu -->
+		<div class="side-block side-menu">
+				<div class="title-block <?=$APPLICATION->GetProperty("CLASS");?>">Навигация</div>
+				<div class="menu-block">
+<ul>
 <?
 $previousLevel = 0;
 foreach($arResult as $arItem):?>
-
-	<?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
-		<?=str_repeat("</ul></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
-	<?endif?>
-
-	<?if ($arItem["IS_PARENT"]):?>
-
-		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li class="open current"><span class="sb_showchild"></span><a href="<?=$arItem["LINK"]?>" ><span><?=$arItem["TEXT"]?></span></a>
-				<ul >
-		<?else:?>
-			<li><a href="<?=$arItem["LINK"]?>" ><span><?=$arItem["TEXT"]?></span></a>
-				<ul>
-		<?endif?>
-
-	<?else:?>
-
-		<?if ($arItem["PERMISSION"] > "D"):?>
-
-			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li class="close"><a href="<?=$arItem["LINK"]?>" class="close"><span><?=$arItem["TEXT"]?></span></a></li>
-			<?else:?>
-				<li class="close"><a href="<?=$arItem["LINK"]?>" ><span><?=$arItem["TEXT"]?></span></a></li>
-			<?endif?>
-
-		<?else:?>
-
-
-
-		<?endif?>
-
-	<?endif?>
-
-	<?$previousLevel = $arItem["DEPTH_LEVEL"];?>
+		<li><a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+		</li>
 
 <?endforeach?>
 
-<?if ($previousLevel > 1)://close last item tags?>
-	<?=str_repeat("</ul></li>", ($previousLevel-1) );?>
-<?endif?>
+
 
 </ul>
 </div>
+</div>
+
 <?endif?>

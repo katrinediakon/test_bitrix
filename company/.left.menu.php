@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"О компании", 
-		"./", 
+		"./index.php", 
 		Array(), 
 		Array(), 
 		"" 
@@ -25,7 +25,7 @@ $aMenuLinks = Array(
 		"История", 
 		"history.php", 
 		Array(), 
-		Array(), 
+		Array("class"=>"color-green"), 
 		"" 
 	),
 	Array(
@@ -38,6 +38,13 @@ $aMenuLinks = Array(
 	Array(
 		"Отзывы", 
 		"/company/otzyvy.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Обратная связь", 
+		"/company/obratnaya-svyaz.php", 
 		Array(), 
 		Array(), 
 		"" 
